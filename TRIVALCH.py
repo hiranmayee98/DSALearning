@@ -5,11 +5,13 @@ Print "YES"(without quotes) if it can form a valid triangle with an area greater
 otherwise print "NO" (without quotes).
 '''
 
-a,b,c=map(float,input().split(" "))
-s=(a+b+c)/2
+a,b,c=map(int,input().split(" "))
+s=(a+b+c)//2
 A=(s*(s-a)*(s-b)*(s-c))**0.5
-if (a+b)>c and (b+c)>a and (c+a)>b:
+if (a+b)>=c and (b+c)>=a and (c+a)>=b:
     if A>0:
         print("YES")
     else:
         print("NO")
+else:
+    print("NO")
